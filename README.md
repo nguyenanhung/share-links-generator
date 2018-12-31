@@ -1,6 +1,6 @@
 # Share Links Generator Tools #
 
-Con code này dùng để genarator link dùng share trên các mạng xã hội
+Con code này dùng để genarator link dùng share trên các mạng xã hội, được xây dựng dựa trên framework CodeIgniter, phiên bản đang sử dụng 3.1.9
 
 ### Hướng dẫn cài đặt
 
