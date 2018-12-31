@@ -1,6 +1,6 @@
 {
-    "name": "sctv-digital-team-i9/project-fakelink-share-facebook",
-    "description": "Project Fakelink share Facebook",
+    "name": "nguyenanhung/share-links-generator",
+    "description": "Project Share Links Generator - Share Fb link building",
     "keywords": [
         "mobifone",
         "vas service",
@@ -9,7 +9,7 @@
         "CodeIgniter"
     ],
     "type": "project",
-    "homepage": "http://dev.nguyenanhung.com/",
+    "homepage": "https://nguyenanhung.com",
     "license": "Apache-2.0",
     "authors": [
         {
