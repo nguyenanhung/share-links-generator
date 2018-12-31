@@ -1,0 +1,8 @@
+.loading{
+    display: none;
+    height:24px;
+}
+
+#UpdateForm.cursor-wait:hover{
+    cursor: wait;
+}
