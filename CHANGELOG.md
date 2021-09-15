@@ -2,11 +2,12 @@
 
 Change Log được viết theo biểu mẫu tại đây: https://keepachangelog.com/en/1.0.0/
 
-## [1.0.1] - 2019/01/01
+## [1.1.0] - 2021/09/15
 
 ### Added
 
 - [x] Tích hợp Docker - PHP 7.4 giúp triển khai nhanh dự án
+- [x] CONTRIBUTING GUIDE - edit from CodeIgniter
 
 ### Changed
 
