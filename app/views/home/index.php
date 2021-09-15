@@ -1,3 +1,10 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+/**
+ * @var array  $data
+ * @var object $item
+ */
+?>
 <div class="container">
     <h2>Quản lý link</h2>
     <p>Danh sách link có trong hệ thống <a href="<?php echo site_url('login/logout'); ?>" class="pull-right">Đăng xuất</a></p>
@@ -23,7 +30,7 @@
 
             <?php
             if (!empty($data['result'])) {
-                foreach ($data['result'] AS $key => $item) {
+                foreach ($data['result'] as $key => $item) {
                     ?>
                     <tr id="artice-<?= $item->id; ?>">
                         <td><?= $item->id; ?></td>

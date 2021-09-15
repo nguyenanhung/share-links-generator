@@ -1,3 +1,9 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+/**
+ * @var array $data
+ */
+?>
 <div class="container">
     <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
         <div class="row">
@@ -17,14 +23,14 @@
                 <form action="<?= base_url('login'); ?>" name="form" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="user" type="text" class="form-control" name="username" required value="<?php echo $data['username']; ?>" placeholder="username">
+                        <input id="user" type="text" class="form-control" name="username" required value="<?= $data['username']; ?>" placeholder="username">
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                         <input id="password" type="password" class="form-control" name="password" required placeholder="Password">
                     </div>
                     <div class="form-group" style="margin-bottom: 0px;">
-                        <p class="mes-error"><?php echo $data['message']; ?></p>
+                        <p class="mes-error"><?= $data['message']; ?></p>
                     </div>
                     <div class="form-group">
                         <!-- Button -->
@@ -592,8 +598,8 @@
             directionX: 'center', // 'center', 'left' or 'right'. 'center' = dots bounce off edges
             directionY: 'center', // 'center', 'up' or 'down'. 'center' = dots bounce off edges
             density: 10000, // How many particles will be generated: one particle every n pixels
-            dotColor: '#eee',
-            lineColor: '#eee',
+            dotColor: '#EEEEEE',
+            lineColor: '#EEEEEE',
             particleRadius: 7, // Dot size
             lineWidth: 1,
             curvedLines: true,

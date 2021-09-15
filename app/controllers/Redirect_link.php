@@ -5,17 +5,20 @@
  * Date: 10/3/2017
  * Time: 2:15 PM
  */
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
  * Class Redirect_link
  *
- * @property object load
- * @property object input
- * @property object output
- * @property object session
- * @property object cache
- * @property object link_model
+ * @author    713uk13m <dev@nguyenanhung.com>
+ * @copyright 713uk13m <dev@nguyenanhung.com>
+ *
+ * @property \CI_Loader  load
+ * @property \CI_Input   input
+ * @property \CI_Output  output
+ * @property \CI_Session session
+ * @property \CI_Cache   cache
+ * @property \Link_model link_model
  */
 class Redirect_link extends CI_Controller
 {
@@ -47,7 +50,7 @@ class Redirect_link extends CI_Controller
         if (!$info = $this->cache->get($cache_file_name)) {
             $this->load->model('link_model');
             $info = $this->link_model->get_info($uuid, 'uuid');
-            if ($info !== NULL) {
+            if ($info !== null) {
                 $this->cache->save($cache_file_name, $info, $cache_file_ttl);
             }
             $this->link_model->close();

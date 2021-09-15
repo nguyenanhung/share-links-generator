@@ -12,6 +12,7 @@ Change Log được viết theo biểu mẫu tại đây: https://keepachangelog
 
 - [x] Nâng cấp Framework CodeIgniter lên phiên bản `^3.1.12-dev`
 - [x] Thay đổi cấu trúc source code cho an toàn hơn
+- [x] Nâng cấp source code tương thích với PHP 7
 
 ## [1.0.0] - 2019/01/01
 

@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 /*
 | -------------------------------------------------------------------
 | DATABASE CONNECTIVITY SETTINGS
@@ -70,26 +70,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | the query builder class.
 */
 $active_group  = 'default';
-$query_builder = TRUE;
+$query_builder = true;
 $db['default'] = array(
-    'dsn'          => '',
-    'hostname'     => '127.0.0.1',
+    'dsn'          => 'mysql:host=mariadb;port=3306;dbname=share_links',
+    'hostname'     => 'mariadb',
     'port'         => 3306,
     'username'     => 'root',
-    'password'     => '',
+    'password'     => 'hungna',
     'database'     => 'share_links',
-    'dbdriver'     => 'mysqli',
+    'dbdriver'     => 'pdo',
     'dbprefix'     => '',
-    'pconnect'     => FALSE,
+    'pconnect'     => false,
     'db_debug'     => (ENVIRONMENT !== 'production'),
-    'cache_on'     => FALSE,
+    'cache_on'     => false,
     'cachedir'     => '',
     'char_set'     => 'utf8',
     'dbcollat'     => 'utf8_general_ci',
     'swap_pre'     => '',
-    'encrypt'      => FALSE,
-    'compress'     => FALSE,
-    'stricton'     => FALSE,
+    'encrypt'      => false,
+    'compress'     => false,
+    'stricton'     => false,
     'failover'     => array(),
-    'save_queries' => FALSE
+    'save_queries' => false
 );

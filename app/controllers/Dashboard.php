@@ -1,15 +1,18 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
  * Class Dashboard
  *
- * @property object load
- * @property object input
- * @property object output
- * @property object session
- * @property object uri
- * @property object link_model
+ * @author    713uk13m <dev@nguyenanhung.com>
+ * @copyright 713uk13m <dev@nguyenanhung.com>
+ *
+ * @property \CI_Loader  load
+ * @property \CI_Input   input
+ * @property \CI_Output  output
+ * @property \CI_Session session
+ * @property \CI_URI     uri
+ * @property \Link_model link_model
  */
 class Dashboard extends CI_Controller
 {
@@ -24,7 +27,7 @@ class Dashboard extends CI_Controller
         $this->load->model('link_model');
         $this->output->set_status_header(200);
         $user_info = $this->session->userdata('user_info');
-        if ($user_info == NULL) {
+        if ($user_info == null) {
             redirect('login/index');
         }
     }
@@ -44,7 +47,7 @@ class Dashboard extends CI_Controller
     public function index($slug = '', $page = '')
     {
         $data           = array();
-        $page           = $this->input->get_post('page', TRUE);
+        $page           = $this->input->get_post('page', true);
         $seg_page       = $this->uri->segment(3);
         $page           = substr($seg_page, 6, 1);
         $data['result'] = $this->link_model->getAllRecord(10, $page);
@@ -78,8 +81,8 @@ class Dashboard extends CI_Controller
      */
     public function deleteItem()
     {
-        $id = $this->input->post('id', TRUE);
-        if ($id !== NULL) {
+        $id = $this->input->post('id', true);
+        if ($id !== null) {
             $check = $this->link_model->check_exists($id);
             if ($check && $this->link_model->delete($id)) {
                 echo $id;
@@ -92,8 +95,8 @@ class Dashboard extends CI_Controller
      */
     public function changeRedirectId()
     {
-        $id                  = $this->input->post('id', TRUE);
-        $redirect_id         = $this->input->post('redirect_id', TRUE);
+        $id                  = $this->input->post('id', true);
+        $redirect_id         = $this->input->post('redirect_id', true);
         $check               = $this->link_model->check_exists($id);
         $data                = array();
         $data['redirect_id'] = $redirect_id;
@@ -107,8 +110,8 @@ class Dashboard extends CI_Controller
      */
     public function changeStatus()
     {
-        $id             = $this->input->post('id', TRUE);
-        $status         = $this->input->post('status', TRUE);
+        $id             = $this->input->post('id', true);
+        $status         = $this->input->post('status', true);
         $status         = $status == 'Active' ? 'Inactive' : 'Active';
         $check          = $this->link_model->check_exists($id);
         $data           = array();
@@ -123,7 +126,7 @@ class Dashboard extends CI_Controller
      */
     public function ajaxLoadItem()
     {
-        $id    = $this->input->post('id', TRUE);
+        $id    = $this->input->post('id', true);
         $check = $this->link_model->check_exists($id);
         $data  = array();
         if ($check) {
@@ -141,8 +144,8 @@ class Dashboard extends CI_Controller
      */
     public function ajaxUpdateItem()
     {
-        $data = $this->input->post('data', TRUE);
-        if ($data != NULL) {
+        $data = $this->input->post('data', true);
+        if ($data != null) {
             $id = $data['id'];
             if ($id != 0) {
                 $this->link_model->update($data['id'], $data);
@@ -160,7 +163,7 @@ class Dashboard extends CI_Controller
      */
     public function ajaxCheckSlugs()
     {
-        $str_slug   = $this->input->post('slug', TRUE);
+        $str_slug   = $this->input->post('slug', true);
         $check_slug = $this->link_model->checkSlugs($str_slug);
         $id         = 0;
         if (!empty($check_slug)) {

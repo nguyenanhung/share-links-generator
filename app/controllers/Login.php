@@ -1,13 +1,16 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
  * Class Login
  *
- * @property object load
- * @property object input
- * @property object output
- * @property object session
+ * @author    713uk13m <dev@nguyenanhung.com>
+ * @copyright 713uk13m <dev@nguyenanhung.com>
+ *
+ * @property \CI_Loader  load
+ * @property \CI_Input   input
+ * @property \CI_Output  output
+ * @property \CI_Session session
  */
 class Login extends CI_Controller
 {
@@ -39,19 +42,19 @@ class Login extends CI_Controller
         );
         $data            = array();
         $data['message'] = "";
-        $username        = $this->input->get_post('username', TRUE);
-        $password        = $this->input->get_post('password', TRUE);
+        $username        = $this->input->get_post('username', true);
+        $password        = $this->input->get_post('password', true);
         /*
          *	check data with users config list and get info user
          */
-        $check_user = FALSE;
+        $check_user = false;
         if (!empty($username) && !empty($password)) {
             foreach ($config['users'] as $key => $value) {
                 if ($value['username'] == $username && $value['password'] = $password) {
                     $check_user = $config['users'][$key];
                 }
             }
-            if ($check_user != FALSE) {
+            if ($check_user != false) {
                 $this->session->set_userdata('user_info', $check_user);
                 redirect(site_url());
             } else {
@@ -77,7 +80,7 @@ class Login extends CI_Controller
     public function logout()
     {
         $user_info = $this->session->userdata('user_info');
-        if ($user_info != NULL) {
+        if ($user_info != null) {
             $this->session->sess_destroy();
         }
         redirect(site_url());

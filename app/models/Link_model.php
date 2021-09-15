@@ -63,4 +63,23 @@ class Link_model extends HungNG_Custom_Based_model
     {
         return $this->db->count_all($this->tableName);
     }
+
+    /**
+     * Function checkSlugs
+     *
+     * @param string $slugs
+     *
+     * @return array|mixed|object|null
+     * @author   : 713uk13m <dev@nguyenanhung.com>
+     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @time     : 09/15/2021 44:31
+     */
+    public function checkSlugs($slugs = '')
+    {
+        $this->db->select();
+        $this->db->from($this->tableName);
+        $this->db->where($this->field['uuid'], $slugs);
+
+        return $this->db->get()->row();
+    }
 }

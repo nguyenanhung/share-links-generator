@@ -1,17 +1,23 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+/**
+ * @var array $data
+ */
+?>
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    <title><?php echo $data['title'] ?></title>
+    <title><?= $data['title'] ?></title>
     <script type="text/javascript">
         var BASE_URL_AJAX = '<?= site_url(); ?>';
     </script>
-    <link rel="stylesheet" href="<?= base_url(); ?>assets/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>assets/css/style.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>assets/font-awesome/css/font-awesome.css">
-    <script src="<?= base_url(); ?>assets/jquery-3.2.0.min.js"></script>
-    <script src="<?= base_url(); ?>assets/js-cookie/js.cookie.js"></script>
-    <script src="<?= base_url(); ?>assets/bootstrap/js/bootstrap.js"></script>
-    <script src="<?= base_url(); ?>assets/main.js"></script>
+    <link rel="stylesheet" href="<?= assets_url('bootstrap/css/bootstrap.css'); ?>">
+    <link rel="stylesheet" href="<?= assets_url('css/style.css'); ?>">
+    <link rel="stylesheet" href="<?= assets_url('font-awesome/css/font-awesome.css'); ?>">
+    <script src="<?= assets_url('jquery-3.2.0.min.js'); ?>"></script>
+    <script src="<?= assets_url('js-cookie/js.cookie.js'); ?>"></script>
+    <script src="<?= assets_url('bootstrap/js/bootstrap.js'); ?>"></script>
+    <script src="<?= assets_url('main.js'); ?>"></script>
 </head>
 <body>
 <?php

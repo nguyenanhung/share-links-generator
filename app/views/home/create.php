@@ -1,3 +1,10 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+/**
+ * @var array  $data
+ * @var object $item
+ */
+?>
 <div class="container">
     <h2>Thêm mới link game casual</h2>
     <p>Link game casual mới lên hệ thống</p>

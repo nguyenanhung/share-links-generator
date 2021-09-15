@@ -214,12 +214,9 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 app/logs/*
 !app/logs/index.html
 !app/logs/.htaccess
-based_core_apps_thudo/logs/*
-!based_core_apps_thudo/logs/index.html
-!based_core_apps_thudo/logs/.htaccess
-based_core_apps_thudo/logs-data/*
-!based_core_apps_thudo/logs-data/index.html
-!based_core_apps_thudo/logs-data/.htaccess
+app/cache/ci_sessions/*
+!app/cache/ci_sessions/index.html
+!app/cache/ci_sessions/.htaccess
 storages/cache_db/*
 !storages/cache_db/index.html
 !storages/cache_db/.htaccess
