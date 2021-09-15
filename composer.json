@@ -15,17 +15,18 @@
         {
             "name": "Nguyen An Hung",
             "email": "dev@nguyenanhung.com",
-            "homepage": "http://www.nguyenanhung.com",
+            "homepage": "https://nguyenanhung.com",
             "role": "Developer"
         }
     ],
     "require": {
+        "php": ">=5.6",
         "ext-json": "*",
+        "nguyenanhung/codeigniter-framework": "^3.1.12",
         "monolog/monolog": "^1.23",
-        "curl/curl": "^1.9",
         "cocur/slugify": "^3.1"
     },
     "require-dev": {
-        "kint-php/kint": "^2.2"
+        "kint-php/kint": "^3.0"
     }
 }

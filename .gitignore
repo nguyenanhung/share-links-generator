@@ -211,9 +211,9 @@ user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
 
 #codeigniter 3
-application/logs/*
-!application/logs/index.html
-!application/logs/.htaccess
+app/logs/*
+!app/logs/index.html
+!app/logs/.htaccess
 based_core_apps_thudo/logs/*
 !based_core_apps_thudo/logs/index.html
 !based_core_apps_thudo/logs/.htaccess
