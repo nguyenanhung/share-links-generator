@@ -1,16 +1,23 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-/**
- * view_paginations
- *
- * @access      public
- * @author      Hung Nguyen <dev@nguyenanhung.com>
- * @version     1.0.2
- * @since       23/12/2016
- *
- * search?q=ahahahahahha
- */
+defined('BASEPATH') or exit('No direct script access allowed');
 if (!function_exists('view_paginations')) {
+    /**
+     * Function view_paginations
+     *
+     * @param        $type
+     * @param        $total_rows
+     * @param        $per_page
+     * @param        $page_number
+     * @param string $page_links
+     * @param        $begin
+     * @param        $end
+     * @param string $title
+     *
+     * @return string
+     * @author   : 713uk13m <dev@nguyenanhung.com>
+     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @time     : 09/15/2021 17:16
+     */
     function view_paginations($type, $total_rows, $per_page, $page_number, $page_links = '', $begin, $end, $title = '')
     {
         /**
@@ -73,15 +80,22 @@ if (!function_exists('view_paginations')) {
         return $main;
     }
 }
-/**
- * view_more
- *
- * @access      public
- * @author      Hung Nguyen <dev@nguyenanhung.com>
- * @version     1.0.1
- * @since       21/12/2016
- */
 if (!function_exists('view_more')) {
+    /**
+     * Function view_more
+     *
+     * @param        $page_number
+     * @param        $page_total
+     * @param        $page_size
+     * @param string $url
+     * @param string $title
+     * @param string $more_type
+     *
+     * @return string
+     * @author   : 713uk13m <dev@nguyenanhung.com>
+     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @time     : 09/15/2021 17:31
+     */
     function view_more($page_number, $page_total, $page_size, $url = '', $title = '', $more_type = '')
     {
         $is_total = ceil($page_total / $page_size);
@@ -110,15 +124,24 @@ if (!function_exists('view_more')) {
         return $main;
     }
 }
-/**
- * select_page
- *
- * @access      public
- * @author      Hung Nguyen <dev@nguyenanhung.com>
- * @version     1.0.1
- * @since       21/12/2016
- */
 if (!function_exists('select_page')) {
+    /**
+     * Function select_page
+     *
+     * @param        $total_rows
+     * @param        $per_page
+     * @param        $page_number
+     * @param string $type
+     * @param string $page_links
+     * @param string $begin
+     * @param string $end
+     * @param string $title
+     *
+     * @return string
+     * @author   : 713uk13m <dev@nguyenanhung.com>
+     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @time     : 09/15/2021 17:39
+     */
     function select_page($total_rows, $per_page, $page_number, $type = '', $page_links = '', $begin = '', $end = '', $title = '')
     {
         /**
@@ -174,31 +197,33 @@ if (!function_exists('select_page')) {
         return $main;
     }
 }
-/**
- * get_paginations_title
- *
- * @access      public
- * @author      Hung Nguyen <dev@nguyenanhung.com>
- * @version     1.0.1
- * @since       21/12/2016
- */
 if (!function_exists('get_paginations_title')) {
+    /**
+     * Function get_paginations_title
+     *
+     * @param $str
+     *
+     * @return array|string|string[]
+     * @author   : 713uk13m <dev@nguyenanhung.com>
+     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @time     : 09/15/2021 17:46
+     */
     function get_paginations_title($str)
     {
-        $str = str_replace('trang-', 'Trang ', $str);
-
-        return $str;
+        return str_replace('trang-', 'Trang ', $str);
     }
 }
-/**
- * get_paginations_number
- *
- * @access      public
- * @author      Hung Nguyen <dev@nguyenanhung.com>
- * @version     1.0.1
- * @since       21/12/2016
- */
 if (!function_exists('get_paginations_number')) {
+    /**
+     * Function get_paginations_number
+     *
+     * @param $str
+     *
+     * @return int
+     * @author   : 713uk13m <dev@nguyenanhung.com>
+     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @time     : 09/15/2021 17:56
+     */
     function get_paginations_number($str)
     {
         $str = str_replace('trang-', '', $str);
@@ -207,4 +232,4 @@ if (!function_exists('get_paginations_number')) {
     }
 }
 /* End of file paginations_helper.php */
-/* Location: ./application/helpers/paginations_helper.php */
+/* Location: ./app/helpers/paginations_helper.php */

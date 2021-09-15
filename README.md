@@ -1,3 +1,5 @@
+[![Latest Stable Version](http://poser.pugx.org/nguyenanhung/share-links-generator/v)](https://packagist.org/packages/nguyenanhung/share-links-generator) [![Total Downloads](http://poser.pugx.org/nguyenanhung/share-links-generator/downloads)](https://packagist.org/packages/nguyenanhung/share-links-generator) [![Latest Unstable Version](http://poser.pugx.org/nguyenanhung/share-links-generator/v/unstable)](https://packagist.org/packages/nguyenanhung/share-links-generator) [![License](http://poser.pugx.org/nguyenanhung/share-links-generator/license)](https://packagist.org/packages/nguyenanhung/share-links-generator) [![PHP Version Require](http://poser.pugx.org/nguyenanhung/share-links-generator/require/php)](https://packagist.org/packages/nguyenanhung/share-links-generator)
+
 # Share Links Generator Tools #
 
 Con code này dùng để genarator link dùng share trên các mạng xã hội, được xây dựng dựa trên framework CodeIgniter, phiên bản đang sử dụng 3.1.9
@@ -52,7 +54,7 @@ $db['default'] = array(
 3. Import Data trong thư mục databases/ lên server với đúng db name đã khai báo ở bước 2
 4. Quản lý link tại đường dẫn: your-domain.com/login.html, ví dụ: http://fakelink.i9.io/login.html
 
-#### Thông tin quản lý 
+#### Thông tin quản lý
 
 **Username**: hungna
 
@@ -74,7 +76,6 @@ Do source được thiết kế đơn giản nên không tập trung vào bảo 
 ### Thông tin liên hệ
 
 Bộ source code được thiết kế bởi các thành viên sau đây
-
 
 | Name        | Email                | Skype            | Facebook      |
 | ----------- | -------------------- | ---------------- | ------------- |

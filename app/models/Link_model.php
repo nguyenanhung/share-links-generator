@@ -1,40 +1,46 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
+
 /**
- * Created by PhpStorm.
- * User: hungna
- * Date: 10/3/2017
- * Time: 2:11 PM
+ * Class Link_model
+ *
+ * @author    713uk13m <dev@nguyenanhung.com>
+ * @copyright 713uk13m <dev@nguyenanhung.com>
+ *
+ * @property \CI_DB_query_builder $db
  */
-require_once APPPATH . 'core/TD_VAS_Based_model.php';
-
-class Link_model extends TD_VAS_Based_model
+class Link_model extends HungNG_Custom_Based_model
 {
-    public $tableName;
-    public $primary_key;
-
     /**
      * Link_model constructor.
      */
     public function __construct()
     {
         parent::__construct();
-        $this->db                = $this->load->database('default', TRUE, TRUE);
-        $this->tableName         = 'links';
-        $this->primary_key       = 'id';
-        $this->field_uuid        = 'uuid';
-        $this->field_name        = 'name';
-        $this->field_website_url = 'website_url';
-        $this->field_fake_domain = 'fake_domain';
-        $this->field_status      = 'status';
-        $this->field_updated_at  = 'updated_at';
+        $this->db          = $this->load->database('default', true, true);
+        $this->tableName   = 'links';
+        $this->primary_key = 'id';
+        $this->field       = [
+            'id'          => 'id',
+            'uuid'        => 'uuid',
+            'name'        => 'name',
+            'website_url' => 'website_url',
+            'fake_domain' => 'fake_domain',
+            'status'      => 'status',
+            'updated_at'  => 'updated_at',
+        ];
     }
 
     /**
+     * Function getAllRecord
+     *
      * @param int $size
      * @param int $page
      *
-     * @return mixed
+     * @return array|array[]|object|object[]
+     * @author   : 713uk13m <dev@nguyenanhung.com>
+     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @time     : 09/15/2021 16:35
      */
     public function getAllRecord($size = 5, $page = 0)
     {
@@ -46,7 +52,12 @@ class Link_model extends TD_VAS_Based_model
     }
 
     /**
-     * @return mixed
+     * Function countTotal
+     *
+     * @return int
+     * @author   : 713uk13m <dev@nguyenanhung.com>
+     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @time     : 09/15/2021 16:37
      */
     public function countTotal()
     {

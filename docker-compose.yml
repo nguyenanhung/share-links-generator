@@ -1,0 +1,81 @@
+version: '3'
+services:
+
+    # PHP Service
+    hungng-app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: digitalocean.com/php
+        container_name: hungng-app
+        restart: unless-stopped
+        tty: true
+        environment:
+            SERVICE_NAME: app
+            SERVICE_TAGS: dev
+        working_dir: /var/www
+        volumes:
+            - ./:/var/www
+            - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+            - ./docker/php/opcache.ini:/usr/local/etc/php/conf.d/opcache.ini
+        networks:
+            - hungng-app-network
+
+    # NGINX Service
+    hungng-webserver:
+        image: nginx:alpine
+        container_name: hungng-webserver
+        restart: unless-stopped
+        tty: true
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - ./:/var/www
+            - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
+        networks:
+            - hungng-app-network
+
+    # MySQL Service
+    hungng-mariadb:
+        image: mariadb:latest
+        container_name: hungng-mariadb
+        hostname: mariadb
+        restart: unless-stopped
+        tty: true
+        ports:
+            - "33060:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: hungna
+        volumes:
+            - hungng-db-data:/var/lib/mysql
+            - ./docker/mariadb/mariadb.cnf:/etc/mysql/mariadb.cnf
+        networks:
+            - hungng-app-network
+
+    # PHP MyAdmin Service
+    hungng-phpmyadmin:
+        image: phpmyadmin/phpmyadmin:latest
+        container_name: hungng-phpmyadmin
+        restart: unless-stopped
+        depends_on:
+            - hungng-mariadb
+        environment:
+            - PMA_HOST=mariadb
+            - PMA_PORT=3306
+            - PMA_USER=root
+            - PMA_PASSWORD=hungna
+        ports:
+            - "3380:80"
+        networks:
+            - hungng-app-network
+
+#Docker Networks
+networks:
+    hungng-app-network:
+        driver: bridge
+
+#Volumes
+volumes:
+    hungng-db-data:
+        driver: local

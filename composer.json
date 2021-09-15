@@ -2,15 +2,12 @@
     "name": "nguyenanhung/share-links-generator",
     "description": "Project Share Links Generator - Share Fb link building",
     "keywords": [
-        "mobifone",
-        "vas service",
-        "api service",
-        "pkd",
+        "Share Link",
         "CodeIgniter"
     ],
     "type": "project",
     "homepage": "https://nguyenanhung.com",
-    "license": "Apache-2.0",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Nguyen An Hung",
