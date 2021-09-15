@@ -4,6 +4,18 @@
 
 Con code này dùng để genarator link dùng share trên các mạng xã hội, được xây dựng dựa trên framework CodeIgniter, phiên bản đang sử dụng 3.1.9
 
+## Screenshot Demo
+
+### Màn hình Login
+
+![](https://i.ibb.co/Rh1mTry/Screen-Shot-2021-09-16-at-03-25-12.jpg)
+
+### Màn hình tạo link và quản lý link
+
+![](https://i.ibb.co/QnR0K1L/Screen-Shot-2021-09-16-at-03-25-22.jpg)
+
+![](https://i.ibb.co/xHCMZvk/Screen-Shot-2021-09-16-at-03-25-42.jpg)
+
 ## Hướng dẫn cài đặt
 
 ### Cài đặt qua composer
