@@ -14,7 +14,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link rel="stylesheet" href="<?= assets_url('bootstrap/css/bootstrap.css'); ?>">
     <link rel="stylesheet" href="<?= assets_url('css/style.css'); ?>">
     <link rel="stylesheet" href="<?= assets_url('font-awesome/css/font-awesome.css'); ?>">
-    <script src="<?= assets_url('jquery-3.2.0.min.js'); ?>"></script>
+    <script src="<?= assets_url('jquery-3.7.1.min.js'); ?>"></script>
     <script src="<?= assets_url('js-cookie/js.cookie.js'); ?>"></script>
     <script src="<?= assets_url('bootstrap/js/bootstrap.js'); ?>"></script>
     <script src="<?= assets_url('main.js'); ?>"></script>
