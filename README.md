@@ -1,4 +1,7 @@
-[![Latest Stable Version](http://poser.pugx.org/nguyenanhung/share-links-generator/v)](https://packagist.org/packages/nguyenanhung/share-links-generator) [![Total Downloads](http://poser.pugx.org/nguyenanhung/share-links-generator/downloads)](https://packagist.org/packages/nguyenanhung/share-links-generator) [![Latest Unstable Version](http://poser.pugx.org/nguyenanhung/share-links-generator/v/unstable)](https://packagist.org/packages/nguyenanhung/share-links-generator) [![License](http://poser.pugx.org/nguyenanhung/share-links-generator/license)](https://packagist.org/packages/nguyenanhung/share-links-generator) [![PHP Version Require](http://poser.pugx.org/nguyenanhung/share-links-generator/require/php)](https://packagist.org/packages/nguyenanhung/share-links-generator)
+[![Latest Stable Version](https://img.shields.io/packagist/v/nguyenanhung/share-links-generator.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/share-links-generator)
+[![Total Downloads](https://img.shields.io/packagist/dt/nguyenanhung/share-links-generator.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/share-links-generator)
+[![License](https://img.shields.io/packagist/l/nguyenanhung/share-links-generator.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/share-links-generator)
+[![PHP Version Require](https://img.shields.io/packagist/dependency-v/nguyenanhung/share-links-generator/php)](https://packagist.org/packages/nguyenanhung/share-links-generator)
 
 # Share Links Generator Tools #
 
